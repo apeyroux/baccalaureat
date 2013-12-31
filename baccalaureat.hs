@@ -8,6 +8,10 @@ main = do
   hSetBuffering stdout NoBuffering
   c <- randomRIO ('a','z')
 
+  putStrLn "\n+---------+---------+---------+---------+---------+---------+---------+---------+---------+"
+  putStrLn "| Prénom  |  Ville  |  Pays   | Végétal | Animal  |Célébrité| Métier  |  Objet  | Points  |"
+  putStrLn "+---------+---------+---------+---------+---------+---------+---------+---------+---------+\n"
+ 
   mapM (\s -> reboursLettre s) [0..5]
 
   putStrLn $ "\n---\nLetter : " ++ show c ++ "\n---"
