@@ -8,7 +8,7 @@ main = do
   hSetBuffering stdout NoBuffering
   c <- randomRIO ('a','z')
 
-  mapM (\s -> rebourdLettre s) [0..5]
+  mapM (\s -> reboursLettre s) [0..5]
 
   putStrLn $ "\n---\nLetter : " ++ show c ++ "\n---"
   putStrLn "You have 2 minutes ..."
@@ -20,6 +20,6 @@ main = do
       progressBar (msg $ show s ++ "s") percentage 60 s 120
       threadDelay 1000000
 
-    rebourdLettre s = do
+    reboursLettre s = do
       progressBar (msg $ "I search letter") percentage 60 s 5
       threadDelay 1000000
